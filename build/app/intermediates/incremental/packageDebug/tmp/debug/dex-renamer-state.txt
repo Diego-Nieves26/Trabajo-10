@@ -1,4 +1,4 @@
-#Mon Nov 21 15:48:32 PET 2022
+#Tue Nov 22 13:27:05 PET 2022
 base.0=/home/diego/Documentos/Certus/Flutter/Team-8-Flutter-Proyecto/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

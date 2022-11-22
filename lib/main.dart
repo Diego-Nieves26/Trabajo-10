@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:team_8_project/Preferences/preferences.dart';
 import 'package:team_8_project/Provider/provider.dart';
+import 'package:team_8_project/Provider/provider_login.dart';
 import 'package:team_8_project/menu_principal.dart';
 
 void main() async {
@@ -13,6 +14,7 @@ void main() async {
     providers: [
       ChangeNotifierProvider(
           create: (_) => ThemeProvider(isDarkMode: Preferences.theme)),
+      ChangeNotifierProvider(create: (_) => ProviderLogin())
     ],
     child: const Team8App(),
   ));

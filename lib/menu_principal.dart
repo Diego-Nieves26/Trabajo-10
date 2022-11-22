@@ -6,6 +6,7 @@ import 'package:team_8_project/Vocales/vocales.dart';
 
 //PAQUETES
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:team_8_project/screens/login_screen.dart';
 
 class MenuPrincipal extends StatelessWidget {
   const MenuPrincipal({super.key});
@@ -168,7 +169,7 @@ class MenuPrincipal extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const PerfilScreen()));
+                                  builder: (context) => const LoginScreen()));
                         },
                       ),
                     ),
