@@ -5,6 +5,7 @@ import 'package:team_8_project/Preferences/preferences.dart';
 import 'package:team_8_project/Provider/provider.dart';
 import 'package:team_8_project/Provider/provider_login.dart';
 import 'package:team_8_project/menu_principal.dart';
+import 'package:team_8_project/service/service_auth.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,7 +15,8 @@ void main() async {
     providers: [
       ChangeNotifierProvider(
           create: (_) => ThemeProvider(isDarkMode: Preferences.theme)),
-      ChangeNotifierProvider(create: (_) => ProviderLogin())
+      ChangeNotifierProvider(create: (_) => ProviderLogin()),
+      ChangeNotifierProvider(create: (_) => AuthService()),
     ],
     child: const Team8App(),
   ));

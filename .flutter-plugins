@@ -1,4 +1,9 @@
 # This is a generated file; do not edit or check into version control.
+flutter_secure_storage=/home/diego/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage-6.1.0/
+flutter_secure_storage_linux=/home/diego/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_linux-1.1.2/
+flutter_secure_storage_macos=/home/diego/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_macos-1.1.2/
+flutter_secure_storage_web=/home/diego/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_web-1.1.1/
+flutter_secure_storage_windows=/home/diego/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_windows-1.1.3/
 path_provider_linux=/home/diego/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.7/
 path_provider_windows=/home/diego/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.1.3/
 shared_preferences=/home/diego/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.0.15/
