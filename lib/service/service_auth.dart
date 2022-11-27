@@ -50,4 +50,16 @@ class AuthService extends ChangeNotifier {
       return decodeResponse['error']['message'];
     }
   }
+
+  // CERRAR SESION
+  Future cerrarSesion() async {
+    await storage.delete(key: 'token');
+    return;
+  }
+
+//VERIFICAR TOKEN
+
+  Future<String> leerToken() async {
+    return await storage.read(key: 'token') ?? '';
+  }
 }

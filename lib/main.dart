@@ -5,6 +5,8 @@ import 'package:team_8_project/Preferences/preferences.dart';
 import 'package:team_8_project/Provider/provider.dart';
 import 'package:team_8_project/Provider/provider_login.dart';
 import 'package:team_8_project/menu_principal.dart';
+import 'package:team_8_project/screens/verify_auth_screen.dart';
+import 'package:team_8_project/service/msg_auth.dart';
 import 'package:team_8_project/service/service_auth.dart';
 
 void main() async {
@@ -35,8 +37,9 @@ class Team8App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Team 8 Proyecto',
+      scaffoldMessengerKey: MsgAuth.msgkey,
       theme: Provider.of<ThemeProvider>(context).currentTheme,
-      home: const MenuPrincipal(),
+      home: const VerifyAuthScreen(),
     );
   }
 }

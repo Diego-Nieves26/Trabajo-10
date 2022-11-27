@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:team_8_project/Provider/provider_login.dart';
 import 'package:team_8_project/menu_principal.dart';
 import 'package:team_8_project/screens/resgister_screen.dart';
+import 'package:team_8_project/service/msg_auth.dart';
 import 'package:team_8_project/service/service_auth.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -159,8 +160,8 @@ class __LoginFormState extends State<_LoginForm> {
                             final String? errorMessage =
                                 await authService.login(loginProvider.email,
                                     loginProvider.password);
-
                             if (errorMessage == null) {
+                              MsgAuth.verSnackbar('Bienvenido!');
                               // ignore: use_build_context_synchronously
                               Navigator.push(
                                   context,
@@ -168,6 +169,8 @@ class __LoginFormState extends State<_LoginForm> {
                                       builder: (context) =>
                                           const MenuPrincipal()));
                             } else {
+                              MsgAuth.verSnackbar(
+                                  'Correo y/o contrasena invalida');
                               loginProvider.isLoading = false;
                             }
                           },

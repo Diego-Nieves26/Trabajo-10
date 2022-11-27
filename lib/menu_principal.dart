@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:team_8_project/Perfil/Perfil.dart';
+import 'package:provider/provider.dart';
 
 //PÁGINAS
 import 'package:team_8_project/Vocales/vocales.dart';
@@ -7,12 +7,14 @@ import 'package:team_8_project/Vocales/vocales.dart';
 //PAQUETES
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:team_8_project/screens/login_screen.dart';
+import 'package:team_8_project/service/service_auth.dart';
 
 class MenuPrincipal extends StatelessWidget {
   const MenuPrincipal({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final authService = Provider.of<AuthService>(context, listen: false);
     return Container(
       //RECURSO DE FONDO
 
@@ -45,10 +47,23 @@ class MenuPrincipal extends StatelessWidget {
             ],
           ),
           toolbarHeight: 90,
+          actions: [
+            IconButton(
+              onPressed: () {
+                authService.cerrarSesion();
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LoginScreen()));
+              },
+              icon: const Icon(
+                Icons.login_outlined,
+                color: Colors.red,
+              ),
+            ),
+          ],
         ),
-
         //CARRUSEL MENÚ
-
         body: Stack(
           children: <Widget>[
             Padding(
@@ -180,23 +195,23 @@ class MenuPrincipal extends StatelessWidget {
 
             //RECURSO ESQUINA INFERIOR DERECHA
 
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Image.asset(
-                        'assets/menuimg/recx2.png',
-                        width: 130,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+            // Column(
+            //   mainAxisAlignment: MainAxisAlignment.end,
+            //   children: [
+            //     IconButton(
+            //         onPressed: () {
+            //            AuthService.cerrarSesion();
+            //           Navigator.push(
+            //               context,
+            //               MaterialPageRoute(
+            //                   builder: (context) => const LoginScreen()));
+            //         },
+            //         icon: const Icon(
+            //           Icons.login_outlined,
+            //           color: Colors.red,
+            //         )),
+            //   ],
+            // ),
           ],
         ),
       ),

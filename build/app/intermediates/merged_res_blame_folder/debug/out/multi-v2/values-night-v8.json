@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/diego/Documentos/Certus/Flutter/Team-8-Flutter-Proyecto/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/home/diego/Documentos/Certus/Flutter/asd/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/diego/Documentos/Certus/Flutter/Team-8-Flutter-Proyecto/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/diego/Documentos/Certus/Flutter/asd/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
